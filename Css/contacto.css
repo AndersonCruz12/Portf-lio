@@ -1,0 +1,117 @@
+/* Reseta os estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a imagem de fundo para o site */
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background: url('../img/CAPA01.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+/* Animação de fade-in para o conteúdo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para a seção do formulário */
+section {
+    background: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1.5s ease;
+    backdrop-filter: blur(10px); /* Para efeito de desfoque */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordas finas */
+}
+
+/* Estilos para o título */
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* Estilos para os labels */
+label {
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos para os inputs e textarea */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Mudança de cor nos campos quando focados */
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #007BFF;
+}
+
+/* Estilos para o botão de envio */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    background: rgb(2, 163, 21);
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background: #00210e;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 600px) {
+    section {
+        padding: 20px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}

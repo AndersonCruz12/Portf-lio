@@ -1,0 +1,90 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do body */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #00210e, #111); /* Fundo gradiente */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Animação de deslizamento */
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para a seção de agradecimento */
+.thank-you-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container do conteúdo */
+.thank-you-container {
+    background: rgba(255, 255, 255, 0.2); /* Fundo transparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    animation: slideIn 1s ease;
+    backdrop-filter: blur(10px); /* Desfoque de fundo */
+}
+
+/* Estilos do título */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Estilo do parágrafo */
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Estilo do botão */
+.back-home-btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: #fff;
+    color: #007BFF;
+    font-size: 1.1em;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Efeito hover no botão */
+.back-home-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+
+    .back-home-btn {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+}

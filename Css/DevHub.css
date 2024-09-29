@@ -1,0 +1,126 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:#333;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção de Introdução */
+.intro-section {
+    background-color: #000000ce;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.intro-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgb(2, 163, 21);
+}
+h2{
+    color: rgb(2, 163, 21);
+}
+
+.intro-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Seção de Conteúdo Animado */
+.content-section {
+    padding: 60px 0;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-out;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-block.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container de Imagem */
+.image-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+/* Container de Texto */
+.text-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Animações ao rolar */
+@media (prefers-reduced-motion: no-preference) {
+    window.addEventListener('scroll', function() {
+        var elements = document.querySelectorAll('.content-block');
+        elements.forEach(function(element) {
+            var position = element.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
+            if (position < windowHeight - 100) {
+                element.classList.add('animated');
+            }
+        });
+    });
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
+}
